@@ -72,7 +72,7 @@ class CenterGuidedSpatialAttention(nn.Module):
 
 class CGCBAMBlock(nn.Module):
     def __init__(self, num_channels, n, reduction_ratio=16, kernel_size=3):
-        super(CBAMBlock, self).__init__()
+        super(CGCBAMBlock, self).__init__()
         self.ca = CenterGuidedChannelAttention(num_channels, reduction_ratio)
         self.sa = CenterGuidedSpatialAttention(n, kernel_size)
 
